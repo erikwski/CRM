@@ -1,0 +1,30 @@
+:root {
+  --primary: #cc9966;
+  --secondary: #523b35;
+  --background: #c19a6b;
+  --elements: #4a2c2a;
+}
+.c_primary {
+  color: var(--primary) !important;
+}
+.bc_primary {
+  background: var(--primary) !important;
+}
+.c_secondary {
+  color: var(--secondary) !important;
+}
+.bc_secondary {
+  background: var(--secondary) !important;
+}
+.c_background {
+  color: var(--background) !important;
+}
+.bc_background {
+  background: var(--background) !important;
+}
+.c_elements {
+  color: var(--elements) !important;
+}
+.bc_elements {
+  background: var(--elements) !important;
+}
