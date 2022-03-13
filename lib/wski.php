@@ -1,6 +1,8 @@
 <?php
-  class wski
+  namespace Wski;
+  class Wski
   {
+    function __construct(){}
     public function qs($string){
       echo "'".$string."'"; 
     }
@@ -10,6 +12,5 @@
     }
   }
   
-  $wski = new wski;
-  return $wski;
+  $wski = new Wski();
 ?>
