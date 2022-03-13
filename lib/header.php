@@ -6,7 +6,8 @@
     header("Location: ../login.php");
     exit();
   }
-  include 'wski.php'
+  //ATTUALMENTE NON INCLUDO LA LIB PHP NELLE PAGINE DELLE VIEW
+  //include 'wski.php'
 ?>
 <head>
   <!--- basic page needs
