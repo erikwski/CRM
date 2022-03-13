@@ -34,7 +34,7 @@
 </head>
   
 <div class="flex flex-row h-full">
-  <nav id="menu" class="bg-white dark:bg-gray-800 w-20 h-screen justify-between flex flex-col">
+  <nav id="menu" class="bg-white dark:bg-gray-800 w-20 h-screen justify-between flex flex-col fixed top-0 left-0">
       <div class="mt-10 mb-10">
           <a href="#" class="wski_tooltip more_left" data-tooltip="home">
               <img src="../img/logo.png" class="rounded-full w-10 h-10 mb-3 mx-auto"/>
