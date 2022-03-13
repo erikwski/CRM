@@ -23,24 +23,7 @@
 
   <!-- icon of website
   ================================================== -->
-  <link
-    rel="apple-touch-icon"
-    sizes="180x180"
-    href="img/logo/apple-icon-180x180.png"
-  />
-  <link
-    rel="icon"
-    type="image/png"
-    sizes="32x32"
-    href="img/favicon-32x32.png"
-  />
-  <link rel="icon" type="image/png" href="img/logo/apple-icon-180x180.png" />
-  <link
-    rel="icon"
-    type="image/png"
-    sizes="16x16"
-    href="img/logo/favicon-16x16.png"
-  />
+  <link rel="shortcut icon" type="image/jpg" href="../img/logo_con_sfondo.jpg"/>
   <script src="/lib/jQuery.js"></script>
   <script src="/lib/wski.js"></script>
   <script>
