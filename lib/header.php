@@ -25,8 +25,8 @@
   <!-- icon of website
   ================================================== -->
   <link rel="shortcut icon" type="image/jpg" href="../img/logo_con_sfondo.jpg"/>
-  <script src="/lib/jQuery.js"></script>
-  <script src="/lib/wski.js"></script>
+  <script src="../lib/jQuery.js"></script>
+  <script src="../lib/wski.js"></script>
   <script>
     //QUESTO JS VIENE ESEGUITO PER OGNI PAGINA
     const wski = new Wski()
