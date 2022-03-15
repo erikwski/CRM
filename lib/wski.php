@@ -2,13 +2,12 @@
   namespace Wski;
   class Wski
   {
-    function __construct(){}
     public function qs($string){
-      echo "'".$string."'"; 
+      return "'".$string."'"; 
     }
-
+    
     public function qn($num){
-      echo (int)$num, "\n";
+      return $num;
     }
   }
   
