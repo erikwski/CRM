@@ -6,10 +6,10 @@
         $password = $_GET["password"];
 
         $sql = "SELECT 1 FROM utenti";
-        $sql .= " WHERE (mail = ". wski->qs($mail);
-        $sql .= " OR nome_utente = ". wski->qs($mail);
-        $sql .= ") AND password = ". wski->qs($password);
-        return $sql;
+        $sql .= " WHERE (mail = ". $wski->qs($mail);
+        $sql .= " OR nome_utente = ". $wski->qs($mail);
+        $sql .= ") AND password = ". $wski->qs($password);
+        
         $result = $db->query($sql);
 
         if(true){
