@@ -3,5 +3,5 @@
   <?php include '../lib/header.php'; ?>
 
 </html>
-Pagina gestione <?php echo $wski->qs("ciao");?> timer
+Pagina gestione timer
 <script src="/js/timer.js"></script>
