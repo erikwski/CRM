@@ -51,6 +51,7 @@ h1 {
   border-radius: 5px;
   padding: 10px;
   margin-bottom: 10px;
+  color: white;
 }
 #mail::placeholder {
   color: white;
@@ -60,6 +61,7 @@ h1 {
   background-color: var(--secondary);
   border: none;
   border-radius: 5px;
+  color: white;
   padding: 10px;
   margin-bottom: 20px;
 }
