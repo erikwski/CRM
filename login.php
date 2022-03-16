@@ -6,17 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="shortcut icon" type="image/jpg" href="img/logo_con_sfondo.jpg"/>
+    <link rel="stylesheet" href="css/login.css">
+    
     <script src="lib/jQuery.js"></script>
     <script src="lib/wski.js"></script>
   </head>
-<body>
-    <h1>Sing-Up</h1>
+<body >
+
+    
+      <h1 >Login</h1>
+      <img src="img/logo.png" alt="none">
+    
     <div id="login">
-      <input type="text" id="mail" placeholder="full mail...">
-      <input type="password" id="password" placeholder="full pw...">
+      <input type="text" id="mail" placeholder="mail/username..." >
+      
+        <input type="password" id="password" placeholder="password..." >
+        
       
       <button type="submit" id="try_login">Login</button>
+      <p>Password dimenticata?</p>
     </div>
+
+
+
+
+
     <script>
       let wski = new Wski()
       const API = wski.getLinkApi("login");
