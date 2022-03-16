@@ -6,7 +6,4 @@
   $wski = require('../lib/wski.php');
   $db = require('../db/db.php');
   session_start();
-  if (isset($_GET['f'])) {
-    echo $_GET['f']();
-  }
 ?>

@@ -27,7 +27,13 @@
           mail: $("#mail").val(),
           password: $("#password").val(),
         })
-        if(j === "N") alert("ajj sbagliat'")
+        if(j.length){ 
+          //errore
+          alert(j)
+        }else{
+          //carico home
+          wski.caricaPagina("views/timer.php", true)
+        }
       })
     </script>
 </body>

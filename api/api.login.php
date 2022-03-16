@@ -4,20 +4,24 @@
         $mail = $_GET["mail"];
         $password = $_GET["password"];
 
-        $sql = "SELECT 1 FROM utenti";
+        $sql = "SELECT nome_utente FROM utenti";
         $sql .= " WHERE (mail = ". $wski->qs($mail);
         $sql .= " OR nome_utente = ". $wski->qs($mail);
         $sql .= ") AND password = ". $wski->qs($password);
-
         $result = $db->query($sql);
-        if(true){
-            //login corretto--> salvo cookie in sessione e carica la home
-            $_SESSION["is_connected"] = true;
-             header("Location: ../views/timer.php");
-            exit();
+        if($result){
+            while ($row = pg_fetch_row($result)) {
+                $_SESSION["user"] = $row[0];
+                return exit();
+            }
+            return "Mail e password errati";
         }else{
-            //errore nel login--> ritorno false
-            return "N";
+           //errore nella query
+           return "Errore nella login";
         }
     };
+
+    if (isset($_GET['f'])) {
+        echo $_GET['f']();
+    }
 ?>
