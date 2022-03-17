@@ -1,5 +1,8 @@
 <?php
-  $is_connected = true;
-
-  return $is_connected;
+  session_start();
+  if(isset($_SESSION['user_logged'])){
+    return true;
+  }else{
+    return false;
+  }
 ?>

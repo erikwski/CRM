@@ -11,7 +11,7 @@
         $result = $db->query($sql);
         if($result){
             while ($row = pg_fetch_row($result)) {
-                $_SESSION["user"] = $row[0];
+                $_SESSION["user_logged"] = $row[0];
                 return exit();
             }
             return "Mail e password errati";
@@ -19,6 +19,11 @@
            //errore nella query
            return "Errore nella login";
         }
+    };
+
+    function logout(){
+        include 'api.php';
+        session_destroy();
     };
 
     if (isset($_GET['f'])) {

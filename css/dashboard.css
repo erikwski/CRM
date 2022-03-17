@@ -3,12 +3,19 @@
   --secondary: #523b35;
   --background: #c19a6b;
   --elements: #4a2c2a;
+  --opacity_primary: #e4c7ab;
 }
 .c_primary {
   color: var(--primary) !important;
 }
 .bc_primary {
   background: var(--primary) !important;
+}
+.c_opacity_primary {
+  color: var(--opacity_primary) !important;
+}
+.bc_opacity_primary {
+  background: var(--opacity_primary) !important;
 }
 .c_secondary {
   color: var(--secondary) !important;
@@ -28,7 +35,7 @@
 .bc_elements {
   background: var(--elements) !important;
 }
-body {
+body:not(.body_login) {
   background: var(--background);
   scrollbar-width: thin;
   scrollbar-color: var(--elements) var(--secondary);
@@ -76,4 +83,15 @@ body::-webkit-scrollbar-thumb:hover {
 .wski_tooltip.more_left:hover:before {
   left: 4rem;
   opacity: 1;
+}
+.placeholder_center_brown::placeholder {
+  text-align: center;
+  color: var(--opacity_primary);
+}
+.secondary_on_hover {
+  transition: background 0.5s, color 0.7s;
+}
+.secondary_on_hover:hover {
+  background: var(--secondary) !important;
+  color: #fff;
 }
