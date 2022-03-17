@@ -3,4 +3,4 @@
   <?php include '../lib/header.php'; ?>
 </html>
 Benvenuto <?php echo $_SESSION["user_logged"]; ?>
-<script src="/js/timer.js"></script>
+<script src="/js/servizi.js"></script>
