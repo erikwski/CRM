@@ -7,24 +7,28 @@
     <title>Login</title>
     <link rel="shortcut icon" type="image/jpg" href="img/logo_con_sfondo.jpg"/>
     <link rel="stylesheet" href="css/login.css">
-    
+    <link rel="stylesheet" href="css/all_compile.css">
     <script src="lib/jQuery.js"></script>
     <script src="lib/wski.js"></script>
   </head>
-<body >
+<body class="m-0 text-center overflow-hidden" >
 
     
-      <h1 >Login</h1>
-      <img src="img/logo.png" alt="none">
+      <h1 class=" text-3xl text-center mt-0 mb-50 text-white w-full p-0.5" >Login</h1>
+      <img src="img/logo.png" alt="none" class="h-200 w-200 mt-0 mb-50">
     
-    <div id="login">
-      <input type="text" id="mail" placeholder="mail/username..." >
+    <div id="login"  class="relative h-1000 mt-0 rounded-t-sm p-2.5 flex flex-col ml">
+      <input type="text" id="mail" placeholder="mail/username..." 
+        class="mt-50 roudend-md p-2.5 mb-10 text-white placeholder:text-white placeholder:opacity-70">
       
-        <input type="password" id="password" placeholder="password..." >
+        <input type="password" id="password" placeholder="password..."
+        class="mt-50 roudend-md p-2.5 mb-10 text-white placeholder:text-white placeholder:opacity-70" >
         
       
-      <button type="submit" id="try_login">Login</button>
-      <p>Password dimenticata?</p>
+      <button type="submit" id="try_login"
+      class="w-3/6 slef-center rounded-sm p-1.5 text-2xl mb-15">
+      Login</button>
+      <p class="mt-0 self-center opacity-40 underline text-white">Password dimenticata?</p>
     </div>
 
 
