@@ -11,22 +11,22 @@
     <script src="lib/jQuery.js"></script>
     <script src="lib/wski.js"></script>
   </head>
-<body class="m-0 text-center overflow-hidden" >
+<body class="bg-[#c19a6b] m-0 text-center overflow-hidden" >
 
     
-      <h1 class=" text-3xl text-center mt-0 mb-50 text-white w-full p-0.5" >Login</h1>
+      <h1  class="bg-[4a2c2a] text-3xl text-center mt-0 mb-50 text-white w-full p-0.5" >Login</h1>
       <img src="img/logo.png" alt="none" class="h-200 w-200 mt-0 mb-50">
     
-    <div id="login"  class="relative h-1000 mt-0 rounded-t-sm p-2.5 flex flex-col ml">
+    <div id="login"  class="bg-[4a2c2a] relative h-1000 mt-0 rounded-t-sm p-2.5 flex flex-col ml">
       <input type="text" id="mail" placeholder="mail/username..." 
-        class="mt-50 roudend-md p-2.5 mb-10 text-white placeholder:text-white placeholder:opacity-70">
+        class="bg-[523b35] mt-50 roudend-md p-2.5 mb-10 text-white placeholder:text-white placeholder:opacity-70">
       
         <input type="password" id="password" placeholder="password..."
-        class="mt-50 roudend-md p-2.5 mb-10 text-white placeholder:text-white placeholder:opacity-70" >
+        class="bg-[523b35] mt-50 roudend-md p-2.5 mb-10 text-white placeholder:text-white placeholder:opacity-70" >
         
       
       <button type="submit" id="try_login"
-      class="w-3/6 slef-center rounded-sm p-1.5 text-2xl mb-15">
+      class="bg-[cc9966] hover:bg-[523b35] w-3/6 slef-center rounded-sm p-1.5 text-2xl mb-15">
       Login</button>
       <p class="mt-0 self-center opacity-40 underline text-white">Password dimenticata?</p>
     </div>
