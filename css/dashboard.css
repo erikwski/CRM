@@ -5,6 +5,41 @@
   --elements: #4a2c2a;
   --opacity_primary: #e4c7ab;
 }
+@font-face {
+  font-family: "Nanum Pen Script";
+  src: URL("font/NanumPenScript-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Poppins";
+  src: URL("font/Poppins-Black.ttf") format("truetype");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Poppins";
+  src: URL("font/Poppins-Bold.ttf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Poppins";
+  src: URL("font/Poppins-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Poppins";
+  src: URL("font/Poppins-Thin.ttf") format("truetype");
+  font-weight: 200;
+}
+html {
+  font-family: "Poppins", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Nanum Pen Script", cursive;
+}
 .c_primary {
   color: var(--primary) !important;
 }
@@ -39,7 +74,7 @@ body:not(.body_login) {
   background: var(--background);
   scrollbar-width: thin;
   scrollbar-color: var(--elements) var(--secondary);
-  padding-left: 90px;
+  padding: 75px 0 0 90px;
 }
 body::-webkit-scrollbar {
   width: 8px;
@@ -94,4 +129,158 @@ body::-webkit-scrollbar-thumb:hover {
 .secondary_on_hover:hover {
   background: var(--secondary) !important;
   color: #fff;
+}
+#header_page {
+  left: 80px;
+  background: linear-gradient(90deg, #483131, #261311);
+}
+#header_page #div_menu {
+  display: none;
+}
+#menu_opacity {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  body:not(.body_login) {
+    padding: 65px 0 0 8px;
+  }
+  #header_page {
+    left: 0;
+  }
+  #header_page #div_menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    height: 56px;
+    cursor: pointer;
+  }
+  #div_menu svg {
+    width: 28px;
+    height: 28px;
+  }
+  #menu {
+    transform: translateX(-100px);
+    z-index: 999;
+    transition: transform 0.5s;
+  }
+  #menu.active_header {
+    transform: translateX(0);
+  }
+  #menu_opacity {
+    display: block;
+    transition: 0.5s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    transform: translateX(100%);
+    background: #00000036;
+    height: 100%;
+    width: 100%;
+    background: transparent;
+  }
+  #menu_opacity.active_header {
+    transform: translateX(0);
+    background: #00000036;
+  }
+}
+/* LOADER */
+#loading {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  top: 0;
+  left: 0;
+  transition: 0.7s;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+}
+#loading.active_load {
+  opacity: 1;
+  z-index: 9999;
+  background: #00000036;
+}
+.loader {
+  position: relative;
+  width: 4rem;
+  height: 4rem;
+  transform-style: preserve-3d;
+  perspective: 800px;
+}
+
+.loader .arc {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border-bottom: 3px solid var(--secondary);
+}
+
+#loading.active_load .loader .arc:nth-child(1) {
+  animation: rotate1 1.15s linear infinite;
+}
+
+#loading.active_load .loader .arc:nth-child(2) {
+  animation: rotate2 1.15s linear infinite;
+}
+
+#loading.active_load .loader .arc:nth-child(3) {
+  animation: rotate3 1.15s linear infinite;
+}
+
+#loading.active_load .loader .arc:nth-child(1) {
+  animation-delay: -0.8s;
+}
+
+#loading.active_load .loader .arc:nth-child(2) {
+  animation-delay: -0.4s;
+}
+
+#loading.active_load .loader .arc:nth-child(3) {
+  animation-delay: 0s;
+}
+
+@keyframes rotate1 {
+  from {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(0);
+  }
+
+  to {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(1turn);
+  }
+}
+
+@keyframes rotate2 {
+  from {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(0);
+  }
+
+  to {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(1turn);
+  }
+}
+
+@keyframes rotate3 {
+  from {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(0);
+  }
+
+  to {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(1turn);
+  }
+}
+html.active_load {
+  pointer-events: none;
+  cursor: wait;
 }

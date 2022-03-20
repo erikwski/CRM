@@ -51,6 +51,7 @@
       const API = wski.getLinkApi("login");
       $("#try_login").click(async()=>{
         if(!$("#mail").val().length || !$("#password").val().length) return alert("Compila i campi scemo");
+        wski.caricamentoInizio()
         let j = await $.get("api/api.login.php",{
           f: "checkLogin",
           mail: $("#mail").val(),
@@ -58,6 +59,7 @@
         })
         if(j.length){ 
           //errore
+          wski.caricamentoFine()
           alert(j)
         }else{
           //carico home
