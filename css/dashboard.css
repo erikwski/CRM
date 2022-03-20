@@ -6,8 +6,8 @@
   --opacity_primary: #e4c7ab;
 }
 @font-face {
-  font-family: "Nanum Pen Script";
-  src: URL("font/NanumPenScript-Regular.ttf") format("truetype");
+  font-family: "Sriracha";
+  src: URL("font/Sriracha-Regular.ttf") format("truetype");
 }
 @font-face {
   font-family: "Poppins";
@@ -38,7 +38,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Nanum Pen Script", cursive;
+  font-family: "Sriracha", cursive;
 }
 .c_primary {
   color: var(--primary) !important;
@@ -110,6 +110,7 @@ body::-webkit-scrollbar-thumb:hover {
   border-radius: 8px;
   text-transform: uppercase;
   transition: 0.6s all;
+  z-index: 99999;
 }
 .wski_tooltip:hover:before {
   left: 2rem;
