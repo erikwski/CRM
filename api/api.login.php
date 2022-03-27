@@ -10,9 +10,9 @@
         $sql .= ") AND password = ". $wski->qs($password);
         $result = $db->query($sql);
         if($result){
-            while ($row = pg_fetch_row($result)) {
-                $_SESSION["user_logged"] = $row[0];
-                return exit();
+            if($result -> num_rows > 0){
+                $_SESSION["user_logged"] = $result[0][0];
+                return;
             }
             return "Mail e password errati";
         }else{
