@@ -49,6 +49,9 @@
     <script>
       let wski = new Wski()
       const API = wski.getLinkApi("login");
+      $("html").keypress((e)=>{
+        if(e.keyCode === 13) $("#try_login").click();
+      })
       $("#try_login").click(async()=>{
         if(!$("#mail").val().length || !$("#password").val().length) return alert("Compila i campi scemo");
         wski.caricamentoInizio()

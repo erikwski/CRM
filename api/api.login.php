@@ -10,9 +10,10 @@
         $sql .= ") AND password = ". $wski->qs($password);
         $result = $db->query($sql);
         if($result){
-            if($result -> num_rows > 0){
-                $_SESSION["user_logged"] = $result[0][0];
-                return;
+            $value = $wski->getFirstRow($result);
+            if($value){
+                $_SESSION["user_logged"] = $value; 
+                return; 
             }
             return "Mail e password errati";
         }else{
