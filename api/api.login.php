@@ -9,17 +9,12 @@
         $sql .= " OR nome_utente = ". $wski->qs($mail);
         $sql .= ") AND password = ". $wski->qs($password);
         $result = $db->query($sql);
-        if($result){
-            $value = $wski->getFirstRow($result);
-            if($value){
-                $_SESSION["user_logged"] = $value; 
-                return; 
-            }
-            return "Mail e password errati";
-        }else{
-           //errore nella query
-           return "Errore nella login";
+        $value = $wski->getFirstRow($result);
+        if($value){
+            $_SESSION["user_logged"] = $value; 
+            return; 
         }
+        return "Mail e password errati";
     };
 
     function logout(){
